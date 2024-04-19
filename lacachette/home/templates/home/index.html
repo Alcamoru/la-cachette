@@ -1,0 +1,176 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant la Cachette à Capbreton</title>
+    <link rel="stylesheet" href="{% static './styles.css' %}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="{% static './index.js' %}"></script>
+</head>
+<body>
+<div class="header-bg">
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Réservations et commandes</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Informations</a></li>
+                <li><a href="#">Avis</a></li>
+            </ul>
+        </div>
+        <div class="presentation">
+            <h1 class="title">LA CACHETTE</h1>
+            <h2>Bistronomie</h2>
+
+            <div class="caracteristics">
+                <div><p>Fait maison</p></div>
+                <div><p>Bistronomie</p></div>
+                <div><p>Poisson</p></div>
+                <div><p>Viande</p></div>
+                <div><p>Burger</p></div>
+                <div><p>Menu express</p></div>
+            </div>
+        </div>
+    </header>
+</div>
+<main>
+    <div class="about">
+        <h1>À propos</h1>
+        <div class="desc">
+            <p>La cachette Capbreton est cachée au quartier Notre Dame, on y <br>
+                retrouve une cuisine bistronomique en travaillant que des <br>
+                produits frais et de saison le tout dans un cadre cosy et <br>
+                chaleureux
+            </p>
+        </div>
+
+    </div>
+
+    <div class="order">
+        <h1>Réservations et commandes</h1>
+        <a href="tel:+33558437680">
+            <img src="{% static './phone.png' %}" alt="">
+            <p>Appeler le 05 58 43 76 80</p>
+        </a>
+    </div>
+    <div class="photos">
+        <h1>Photos</h1>
+        <img src="{% static './restaurant-image.webp' %}" alt="">
+    </div>
+    <div class="infos">
+        <h1>Informations</h1>
+        <div class="infos-box">
+            <h3>Coordonnées</h3>
+            <div class="map-and-infos">
+                <div id="map"></div>
+                <script>(g => {
+                    var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__",
+                        m = document, b = window;
+                    b = b[c] || (b[c] = {});
+                    var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams,
+                        u = () => h || (h = new Promise(async (f, n) => {
+                            await (a = m.createElement("script"));
+                            e.set("libraries", [...r] + "");
+                            for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                            e.set("callback", c + ".maps." + q);
+                            a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                            d[q] = f;
+                            a.onerror = () => h = n(Error(p + " could not load."));
+                            a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                            m.head.append(a)
+                        }));
+                    d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+                })
+                ({key: "AIzaSyC4vI0wtPKJwd8OJgNEZ2TYPUzzhJd5L04", v: "beta"});</script>
+                <div class="map-infos">
+                    <div class="adresse">
+                        <img src="{% static './maker.png' %}" alt="">
+                        <div class="text-adress">
+                            <p>La cachette</p>
+                            <p>Quartier Notre Dame</p>
+                            <p>Les Terrasses de l'océan</p>
+                            <p>40130 Capbreton</p>
+                        </div>
+
+                    </div>
+                    <div class="phone">
+                        <a href="tel:+33558437680">
+                            <img src="{% static './phone.png' %}" alt="">
+                            <p>Appeler le 05 58 43 76 80</p>
+                        </a>
+                    </div>
+                    <div class="email">
+                        <a href="mailto:lacachette40@gmail.com">
+                            <img src="{% static './email.png' %}" alt="">
+                            <p>Contactez nous par mail</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="horaires-et-fermetures">
+                <div class="horaires">
+                    <h3>Horaires d'ouverture</h3>
+                    <div class="workday">
+                        <p class="day">Lundi</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+                    <div class="workday">
+                        <p class="day">Mardi</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+                    <div class="workday">
+                        <p class="day">Mercredi</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+                    <div class="workday">
+                        <p class="day">Jeudi</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+                    <div class="workday">
+                        <p class="day">Vendredi</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+                    <div class="workday">
+                        <p class="day">Samedi</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+                    <div class="workday">
+                        <p class="day">Dimanche</p>
+                        <p class="midday-hour">12:30 - 14:30</p>
+                        <p class="night-hour">19:00 - 23:30</p>
+                    </div>
+                    <hr>
+
+                </div>
+                <div class="fermetures">
+                    <h3>
+                        Fermetures exceptionnelles
+                    </h3>
+                    <p>Aucune fermeture exceptionnelle de prévue</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="avis">
+        <h1>Avis</h1>
+        <p>Il n'y a pas encore d'avis. Soyez le premier !</p>
+    </div>
+</main>
+</body>
+</html>
