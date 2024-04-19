@@ -214,11 +214,6 @@ strong {
     align-items: center;
 }
 
-#map {
-    height: 40vh;
-    width: 30vw;
-}
-
 .map-infos {
     margin-left: 2em;
 }
